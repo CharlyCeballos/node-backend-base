@@ -4,7 +4,9 @@
   "description": "Base backend project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec npm run babel-node -- app.js"
+    "start": "nodemon --exec npm run babel-node -- app.js",
+    "migrate": "migrate-mongo status && migrate-mongo up && migrate-mongo status",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -35,7 +37,7 @@
     "@babel/core": "^7.24.7",
     "@babel/node": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
-    "@eslint/js": "^9.6.0",
+    "@eslint/js": "^9.9.0",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.1",
